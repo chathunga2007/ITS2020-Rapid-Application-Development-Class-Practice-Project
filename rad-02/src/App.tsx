@@ -1,6 +1,8 @@
 // import { Component } from "react";
 // import { Fragment } from "react/jsx-runtime"
-import Card from "./components/card"
+// import Card from "./components/card"
+
+import { useState } from "react"
 
 // ---------- Class Component ----------
 
@@ -12,7 +14,7 @@ import Card from "./components/card"
 
 // ---------- Functional component ----------
 
-const students = [
+/* const students = [
   { id: 1, name: "Selvaraja", age: 21, email: "selvaraja@example.com" },
   { id: 2, name: "Sadika", age: 22, email: "sadika@example.com" },
   { id: 3, name: "Sasindu", age: 19, email: "sasindu@example.com" },
@@ -71,7 +73,7 @@ const App = () => {
         <h1>Hi React</h1>
       </Card>
       self closing tag
-      <Card /> */}
+      <Card /> }
 
       <Card 
         name={"chathunga"}
@@ -92,6 +94,34 @@ const App = () => {
         )
       })}
     </>
+  )
+}
+  */
+
+// Count App
+// react hooks
+
+const App = () => {
+  // state = data, component
+  // let count = 0
+  const [count, setCount] = useState(0) // [0, 1]
+
+  const handlePlus = () => {
+    setCount(count + 1)
+    console.log(count)
+  }
+
+  const handleMin = () => {
+    setCount(count - 1)
+    console.log(count)
+  }
+
+  return (
+    <div>
+      <button onClick={handlePlus}>+</button>
+      <h1>{count}</h1>
+      <button onClick={handleMin}>-</button>
+    </div>
   )
 }
 
