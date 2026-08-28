@@ -125,63 +125,71 @@ const App = () => {
 // }
 
 // Simple Form
+// const App = () => {
+//   const [name, setName] = useState<string>("")
+//   const [age, setAge] = useState<number>(0)
+//   const [email, setEmail] = useState<string>("")
+//   const [users, setUsers] = useState<any>([])
+
+//   const handleSaveUser = () => {
+//       if (!name || !age || !email) {
+//       alert("Please fill all fields...!")
+//       return
+//     } 
+
+//     const user = { name, age, email }
+//     // const newUsers = [...users, user] old array + new element
+//     setUsers([...users, user])
+
+//     setName("")
+//     setAge(0)
+//     setEmail("")
+//   }
+
+//   return (
+//     <div>
+
+//       <div>
+//         {users.map((user: any) => {
+//           return (
+//             <div>
+//               <h1>{user.name}</h1>
+//               <h2>{user.age}</h2>
+//               <h2>{user.email}</h2>
+//             </div>
+//           )
+//         })}
+//       </div>
+//       <hr />
+
+//       <input
+//         value={name}
+//         onChange={(e) => setName(e.target.value)}
+//         type="text"
+//         placeholder="name"
+//       />
+
+//       <input 
+//         value={age}
+//         onChange={(e) => setAge(Number(e.target.value))}
+//         type="number"
+//         placeholder="age" />
+
+//       <input 
+//         value={email}
+//         onChange={(e) => setEmail(e.target.value)}
+//         type="text"
+//         placeholder="email" />
+
+//       <button onClick={handleSaveUser}>Save</button>
+//     </div>
+//   )
+// }
+
 const App = () => {
-  const [name, setName] = useState<string>("")
-  const [age, setAge] = useState<number>(0)
-  const [email, setEmail] = useState<string>("")
-  const [users, setUsers] = useState<any>([])
-
-  const handleSaveUser = () => {
-      if (!name || !age || !email) {
-      alert("Please fill all fields...!")
-      return
-    } 
-
-    const user = { name, age, email }
-    // const newUsers = [...users, user] old array + new element
-    setUsers([...users, user])
-
-    setName("")
-    setAge(0)
-    setEmail("")
-  }
-
-  return (
-    <div>
-
-      <div>
-        {users.map((user: any) => {
-          return (
-            <div>
-              <h1>{user.name}</h1>
-              <h2>{user.age}</h2>
-              <h2>{user.email}</h2>
-            </div>
-          )
-        })}
-      </div>
-      <hr />
-      
-      <input
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        type="text"
-        placeholder="name"
-      />
-
-      <input 
-        value={age}
-        onChange={(e) => setAge(Number(e.target.value))}
-        type="number"
-        placeholder="age" />
-
-      <input 
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        type="text"
-        placeholder="email" />
-
-      <button onClick={handleSaveUser}>Save</button>
+  return(
+    <div className="bg-red-500">
+      Hello React
     </div>
   )
 }
