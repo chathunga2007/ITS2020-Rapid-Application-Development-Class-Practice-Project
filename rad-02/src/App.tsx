@@ -1,120 +1,96 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+// import { Component } from "react";
+// import { Fragment } from "react/jsx-runtime"
+import Card from "./components/card"
 
-function App() {
-  const [count, setCount] = useState(0)
+// ---------- Class Component ----------
 
+// class App extends Component{
+//   render(){
+//     return <h1>Hello World</h1>
+//   }
+// }
+
+// ---------- Functional component ----------
+
+const students = [
+  { id: 1, name: "Selvaraja", age: 21, email: "selvaraja@example.com" },
+  { id: 2, name: "Sadika", age: 22, email: "sadika@example.com" },
+  { id: 3, name: "Sasindu", age: 19, email: "sasindu@example.com" },
+  { id: 4, name: "Hirusha", age: 20, email: "hirusha@example.com" },
+  { id: 5, name: "Kaveesha", age: 23, email: "kaveesha@example.com" },
+  { id: 6, name: "Thamindu", age: 21, email: "thamindu@example.com" },
+  { id: 7, name: "Oshan", age: 22, email: "oshan@example.com" },
+  { id: 8, name: "Chathura", age: 19, email: "chathura@example.com" },
+  { id: 9, name: "Rayan", age: 24, email: "rayan@example.com" },
+  { id: 10, name: "Malindu", age: 20, email: "malindu@example.com" }
+];
+
+const App = () => {
+  // JSX/TSX -> JavaScript XML
+  // JS + XML (HTML)
+  // return <div></div>
+
+  const name = "Chathunga"
+
+  // map -> old arr -> new arr
+  // [ 1, 2, 3 ]
+
+  // for (let i = 0; i < students.length; i++) {
+  //   const student = students[i]
+  // }
+
+  // [ 10, 20, 30]
+  // const newStudent = students.map((student) => {
+  //   return { username: student.name }
+  // })
+
+  // console.log(students)
+  // console.log("------------")
+  // console.log(newStudent)
+
+  // H1, P
   return (
+    //01. wrapping element using div
+    // <div>
+    //   <h1>Hello</h1>
+    //   <p>Hi React</p>
+    // </div>
+
+    //02. wrapping element using fragment
+    // <Fragment>
+    //   <h1>Hello</h1>
+    //   <p>hiiiiiiiiii</p>
+    // </Fragment>
+
+    //03. wrapping element using empty brackets
+    
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+      {/* <h1>App</h1>
+      <Card data={name} x={100}></Card> 
+      <Card>
+        <h1>Hi React</h1>
+      </Card>
+      self closing tag
+      <Card /> */}
 
-      <div className="ticks"></div>
+      <Card 
+        name={"chathunga"}
+        age={18}
+        email={"chathunga@ijse.lk"}
+      />
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <Card 
+        name={"sahan"}
+        age={20}
+        email={"sahan@ijse.lk"}
+      />
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+
+      {students.map((student) => {
+        return (
+          <Card name={student.name} age={student.age} email={student.email} />
+        )
+      })}
     </>
   )
 }
