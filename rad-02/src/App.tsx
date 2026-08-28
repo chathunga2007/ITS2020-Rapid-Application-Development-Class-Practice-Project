@@ -1,7 +1,6 @@
 // import { Component } from "react";
 // import { Fragment } from "react/jsx-runtime"
 // import Card from "./components/card"
-
 import { useState } from "react"
 
 // ---------- Class Component ----------
@@ -101,26 +100,57 @@ const App = () => {
 // Count App
 // react hooks
 
+// const App = () => {
+//   // state = data, component
+//   // let count = 0
+//   const [count, setCount] = useState(0) // [0, 1]
+
+//   const handlePlus = () => {
+//     setCount(count + 1)
+//     console.log(count)
+//   }
+
+//   const handleMin = () => {
+//     setCount(count - 1)
+//     console.log(count)
+//   }
+
+//   return (
+//     <div>
+//       <button onClick={handlePlus}>+</button>
+//       <h1>{count}</h1>
+//       <button onClick={handleMin}>-</button>
+//     </div>
+//   )
+// }
+
+// Simple Form
 const App = () => {
-  // state = data, component
-  // let count = 0
-  const [count, setCount] = useState(0) // [0, 1]
-
-  const handlePlus = () => {
-    setCount(count + 1)
-    console.log(count)
-  }
-
-  const handleMin = () => {
-    setCount(count - 1)
-    console.log(count)
-  }
+  const [name, setName] = useState("")
+  const [age, setAge] = useState(0)
+  const [email, setEmail] = useState("")
 
   return (
     <div>
-      <button onClick={handlePlus}>+</button>
-      <h1>{count}</h1>
-      <button onClick={handleMin}>-</button>
+      <input
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        type="text"
+        placeholder="name"
+      />
+
+      <input 
+        value={age}
+        onChange={(e) => setAge(Number(e.target.value))}
+        type="number"
+        placeholder="age" />
+
+      <input 
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        type="text"
+        placeholder="email" />
+      <button>Save</button>
     </div>
   )
 }
