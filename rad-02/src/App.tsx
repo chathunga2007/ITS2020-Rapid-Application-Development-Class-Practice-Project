@@ -186,6 +186,7 @@ const App = () => {
 //   )
 // }
 
+// tailwind css try now
 const App = () => {
   return(
     <div className="bg-red-500">
